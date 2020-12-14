@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>R18 (2-2) Credit Calculation</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script >
+    try{
+
+        function fun(num){
+           var k=document.cal.result;
+           var a1=document.getElementById("id1").value;
+           var a2=document.getElementById("id2").value;
+           var a3=document.getElementById("id3").value;
+           var a4=document.getElementById("id4").value;
+           var a5=document.getElementById("id5").value;
+           var a6=document.getElementById("id6").value;
+           var a7=document.getElementById("id7").value;
+           var a8=document.getElementById("id8").value;
+           if(a1=="" ||a2=="" ||a3=="" ||a4=="" ||a5=="" ||a6=="" ||a7=="" ||a8=="" ){
+            alert("Please fill all the fields...");
+                document.cal.dm.focus();
+                return  false;
+           }
+           var reg=/^([056789]?(10)?$)/
+            var r1=reg.test(a1);var r2=reg.test(a2);var r3=reg.test(a3);var r4=reg.test(a4);var r5=reg.test(a5);var r6=reg.test(a6);var r7=reg.test(a7);var r8=reg.test(a8);
+               var estimate=r1 &&r2 && r3 &&r4 &&r5 &&r6 &&r7&&r8 ;
+               if(!estimate){
+           alert("Please Enter Valid Credits");
+               }
+           
+           else{
+           var t=(a1*3+a2*3+a3*3+a4*4+a5*4+a6*1.5+a7*1.5+a8*1)/21;
+             document.getElementById("credits").innerHTML="Your Grade is : "+t.toFixed(2);
+           }
+          
+           
+          
+        }
+        function handleOnFocus(x){
+          x.style.backgroundColor="lightblue";
+        }
+        function handleOnBlur(x){
+          x.style.backgroundColor="white";
+        }
+       function load(){
+           window.print();
+       }
+         
+
+     }
+     catch(obj){
+      document.write(obj.message);
+           }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+<body  >
+  <div class="high">
+  <h1 class="top"> JNTUH BTech ( R<sub>18</sub> ) </h1>
+  <h2 class="top">2-2 Semister Credits Calculation</h2>
+     </div>
+     <form name=cal  onsubmit="return fun()">
+   	    <h2> Enter Credits :</h2>
+          <img id="imge" src="https://www.jntufastupdates.com/wp-content/uploads/2017/03/jntuh-r16-grades.png" alt="Grades and Grade Points"><br/>
+          <br/>
+          <div >
+             <label value="dm" >Discrete Mathematics:</label><br/>
+   	 <input id="id1"  onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)"  type="Number" maxlength="2" name="dm" value="dm" /><br/>
+   	<label value="befa">Business Economics & Financial Analysis:</label><br/> <input id="id2" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" value="befa" type="Number" name="befa" /></br> 
+   	<label class="lbl">Operating Systems :</label><br/> <input id="id3" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="os" /></br>
+   	<label>Database Management Systems :</label><br/> <input id="id4" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="dbms" /><br/>
+   	<label>Java Programming:</label> <br/><input id="id5" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="js" /></br>
+   	<label>Operating Systems Lab:</label><br/> <input id="id6" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="oslab" /><br/>
+   	<label>Database Management Systems Lab:</label><br/> <input id="id7" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="dbmslab" /><br/>
+   	<label>Java Programming Lab :</label><br/> <input id="id8" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="javalab" /></br>
+   	</div>
+    <input id="btn" type="button" name="calculate" value="Calculate" onclick="fun(this)">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="btn" type="button" name="printer" value="Print" onclick="load()"><br/></br>
+     <b id="credits" > </br>
+   </form>
+    
+  
+</body>
+</html>
