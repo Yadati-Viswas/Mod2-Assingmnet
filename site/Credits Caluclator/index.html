@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>R18 (3-1) Credit Calculation</title>
+  <link rel="preconnect" href="https://f...content-available-to-author-only...c.com">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="javaScript.js"></script>
+<link href="https://f...content-available-to-author-only...s.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+<body  >
+  <div class="high">
+  <h1 class="top"> JNTUH BTech ( R<sub>18</sub> ) </h1>
+  <h2 class="top">3-1 Semister Credits Calculation</h2>
+     </div>
+     <form name=cal  onsubmit="return fun()">
+   	    <h2> Enter Grade Points :</h2>
+          <img id="imge" src="https://w...content-available-to-author-only...s.com/wp-content/uploads/2017/03/jntuh-r16-grades.png" alt="Grades and Grade Points"><br/>
+          <br/>
+          <div >
+             <label value="dm" >Formal Languages & Automata Theory :</label><br/>
+   	 <input id="id1"  onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)"  type="Number" maxlength="2" name="dm" value="dm" /><br/>
+   	<label value="befa">Software Engineering :</label><br/> <input id="id2" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" value="befa" type="Number" name="befa" /></br> 
+   	<label class="lbl">Data Communication & Computer Networks :</label><br/> <input id="id3" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="os" /></br>
+   	<label>Web Programming :</label><br/> <input id="id4" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="dbms" /><br/>
+   	<label>Machine Learning:</label> <br/><input id="id5" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="js" /></br>
+   	<label>Data Analytics:</label><br/> <input id="id6" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="oslab" /><br/>
+   	<label>Software Engineering Lab :</label><br/> <input id="id7" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="dbmslab" /><br/>
+   	<label>Computer Networks & Web Programming Lab:</label><br/> <input id="id8" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="javalab" /></br>
+	<label>Advanced Communication Skills Lab:</label><br/> <input id="id9" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)" type="Number" name="aecslab" /></br>
+   	</div>
+    <input id="btn" type="button" name="calculate" value="Calculate" onclick="fun(this)">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="btn" type="button" name="printer" value="Print" onclick="load()"><br/></br>
+     <b id="credits" > </br>
+   </form>
+    
+  
+</body>
+</html>
